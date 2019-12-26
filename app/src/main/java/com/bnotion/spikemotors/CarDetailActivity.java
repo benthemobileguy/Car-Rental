@@ -4,13 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
+import java.util.ArrayList;
 
 public class CarDetailActivity extends AppCompatActivity {
 private String car_name, fuelType, engine, no_of_seats, fuelEconomy, air_condition, hourlyPrice, dailyPrice;
+private LinearLayout  mImagesArray;
+private ArrayList<String> images;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +41,26 @@ private String car_name, fuelType, engine, no_of_seats, fuelEconomy, air_conditi
         no_of_seats = intent.getStringExtra("no_seats");
         hourlyPrice = intent.getStringExtra("hourly_price");
         dailyPrice = intent.getStringExtra("daily_price");
+        images  = intent.getStringArrayListExtra("imageURLS");
+        mImagesArray =  findViewById(R.id.imagesArray);
+        ImageView mImageView = findViewById(R.id.main_img);
+        RequestOptions placeholderRequest = new RequestOptions().fitCenter();
+        placeholderRequest.placeholder(R.drawable.placeholder);
+        Glide.with(this).applyDefaultRequestOptions(placeholderRequest).load(images.get(0)).into(mImageView);
+        //get images loop inside linear layout
+        for(int i=0;i<images.size();i++)
+        {
+            ImageView image = new ImageView(this);
+            image.setLayoutParams(new android.view.ViewGroup.LayoutParams(150,150));
+            image.setMaxHeight(50);
+            image.setMaxWidth(50);
+            image.setPadding(0,0,6,0);
+            Glide.with(this)
+                    .load(images.get(i))
+                    .into(image);
+            // Adds the view to the layout
+            mImagesArray.addView(image);
+        }
         TextView mCarName = findViewById(R.id.car_name);
         TextView mFuelType = findViewById(R.id.fuel_type);
         TextView mEngine = findViewById(R.id.engine);

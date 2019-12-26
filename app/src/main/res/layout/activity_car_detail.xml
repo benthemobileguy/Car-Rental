@@ -7,15 +7,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CarDetailActivity">
-    <ScrollView
-        android:layout_marginBottom="60dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
     <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:background="@color/customDark"
@@ -34,6 +27,27 @@
             app:fontFamily="@font/muli_bold"
             android:textSize="16sp" />
     </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   <ImageView
+       android:id="@+id/main_img"
+       android:scaleType="centerCrop"
+       android:layout_width="match_parent"
+       android:layout_height="150dp" />
+        <LinearLayout
+            android:padding="16dp"
+            android:id="@+id/imagesArray"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
     <LinearLayout
         android:padding="16dp"
         android:orientation="horizontal"
