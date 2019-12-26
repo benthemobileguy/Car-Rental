@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg_color"
+    android:layout_height="match_parent"
+    tools:context=".AddCarActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:id="@+id/toolbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:text="New Car"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:fontFamily="@font/muli_bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@android:color/darker_gray"/>
+    <ProgressBar
+        android:layout_below="@id/shadow"
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.CustomColor2"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/car_name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textCapWords"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="@string/car_name"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/fuel_type_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:layout_below="@+id/car_name_field"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="Fuel Type"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/engine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:layout_below="@+id/fuel_type_field"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="@string/engine_type"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/no_of_seats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_below="@+id/engine"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="@string/number_of_seats"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/fuel_economy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/no_of_seats"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:gravity="top"
+                android:hint="Fuel Economy"
+                android:inputType="textCapWords"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/air_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:layout_below="@+id/fuel_economy"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="Air Condition"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/hourly_price_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_below="@+id/air_condition"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="Hourly Price"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/daily_price_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_below="@+id/hourly_price_field"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round_corner"
+                android:fontFamily="@font/muli_semibold"
+                android:hint="Daily Price"
+                android:padding="10dp" />
+            <Spinner
+                android:id="@+id/price_spinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/daily_price_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_spinner">
+            </Spinner>
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/price_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_spinner">
+            </Spinner>
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/category_spinner"
+                android:background="@color/lightDark"/>
+            <TextView
+                android:id="@+id/upload_instruction"
+                android:layout_below="@+id/view4"
+                android:fontFamily="@font/muli_semibold"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="Upload the images of yor car here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/upload_car"
+                android:layout_marginTop="8dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/upload_instruction"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/upload_car"/>
+            <TextView
+                android:fontFamily="@font/muli"
+                android:id="@+id/number_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upload_car"
+                android:layout_marginRight="5dp"
+                android:textSize="17sp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/photo_text"
+                android:textColor="@android:color/holo_red_light"
+                android:text="0"
+                android:layout_toStartOf="@+id/photo_text"
+                android:layout_marginEnd="5dp" />
+            <TextView
+                android:fontFamily="@font/muli"
+                android:id="@+id/photo_text"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upload_car"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:text="Image(s) Uploaded"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/photo_text"
+                android:id="@+id/recycler_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <Button
+                android:id="@+id/postCar"
+                android:textSize="16sp"
+                android:textColor="@drawable/text_selector"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/muli_semibold"
+                android:textAllCaps="false"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@id/recycler_photos"
+                android:gravity="center"
+                android:text="Post New Car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

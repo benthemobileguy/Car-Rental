@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CarDetailActivity">
+    <ScrollView
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/customDark"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/car_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:ellipsize="end"
+            android:text="Car Rentals"
+            app:fontFamily="@font/muli_bold"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel Type"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:id="@+id/fuel_type"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Engine"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:id="@+id/engine"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Number of Seats"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:id="@+id/no_of_seats"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel Economy"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:id="@+id/fuel_economy"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Air Condition"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:id="@+id/air_condition"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:background="@color/customDark"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:text="Booking Price"
+            app:fontFamily="@font/muli_bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/hourly_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Hourly Price"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Daily Price"
+            app:fontFamily="@font/muli_semibold" />
+        <TextView
+            android:id="@+id/daily_price"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightDark"
+            android:ellipsize="end"
+            android:text="Fuel"
+            app:fontFamily="@font/muli_semibold" />
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/continue_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_dark"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/contine_booking"
+        android:textColor="@drawable/text_selector" />
+</RelativeLayout>

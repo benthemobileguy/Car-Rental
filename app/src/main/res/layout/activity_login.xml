@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+<ImageView
+    android:background="@drawable/splash_bg"
+    android:scaleType="centerCrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+    <View
+        android:alpha="0.6"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="26sp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Car Rental Service"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/custom_red"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/get_started"
+        android:textColor="@drawable/text_selector" />
+    <LinearLayout
+        android:background="@android:color/white"
+        android:padding="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout1"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/sign_in"
+            android:textColor="@drawable/text_selector"
+            android:layout_marginRight="5dp" />
+        <Button
+            android:id="@+id/register"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/custom_red"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/register"
+            android:textColor="@drawable/text_selector"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:padding="30dp"
+        android:id="@+id/layout2"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/email_login"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:hint="Email"
+            android:textSize="14.5sp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/pass_login"
+            android:inputType="textPassword"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:textSize="14.5sp"
+            android:hint="Password"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/custom_red"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/login"
+            android:textColor="@drawable/text_selector" />
+        <TextView
+            android:id="@+id/forgotten_pass"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli_bold"
+            android:gravity="center"
+            android:textColor="@color/lightDark"
+            android:text="Forgotten Password?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@android:color/white"
+        android:padding="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout3"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/names_reg"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:hint="Names"
+            android:textSize="14.5sp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <EditText  android:id="@+id/email_reg"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="14.5sp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <EditText  android:id="@+id/pass_reg"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="14.5sp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <EditText  android:id="@+id/phone_reg"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:textSize="14.5sp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/custom_red"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/register"
+            android:textColor="@drawable/text_selector" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:padding="30dp"
+        android:id="@+id/layout4"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/email_reset"
+            android:fontFamily="@font/muli_semibold"
+            android:textColor="@android:color/white"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="14.5sp"
+            android:layout_marginBottom="16dp"
+            android:textColorHint="@android:color/white"
+            android:padding="16dp"
+            android:background="@color/lightDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/reset_btn"
+            android:layout_weight="0.5"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/custom_red"
+            android:fontFamily="@font/muli_bold"
+            android:text="Reset Password"
+            android:textColor="@drawable/text_selector" />
+
+        <TextView
+            android:id="@+id/recovery_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli_semibold_italic"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Your recovery instruction has been sent to you"
+            android:textColor="@color/lightDark" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.CustomColor"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+</RelativeLayout>

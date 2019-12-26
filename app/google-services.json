@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "787526683033",
+    "firebase_url": "https://spikemotors-4806c.firebaseio.com",
+    "project_id": "spikemotors-4806c",
+    "storage_bucket": "spikemotors-4806c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787526683033:android:6c15d25dc967c87815ab08",
+        "android_client_info": {
+          "package_name": "com.bnotion.spikemotors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787526683033-92ifkkh1pdhdlu76qgtrsuuiplloh727.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bnotion.spikemotors",
+            "certificate_hash": "77a9291c0c00f48714d989c978e69823d90c72ad"
+          }
+        },
+        {
+          "client_id": "787526683033-biv4709kj9lsmoe0tejnnk9q952m702m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ2rh0E19Ax_H2WMCp5zshbWmGGXsWj3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787526683033-biv4709kj9lsmoe0tejnnk9q952m702m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Car Rentals</string>
+    <string name="get_started">Get Started</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="view_cars">View Cars</string>
+    <string name="search_cars">Search Cars</string>
+    <string name="share">Share</string>
+    <string name="my_profile">My Profile</string>
+    <string name="about_us">About Us</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="explore_cars">Explore Cars</string>
+    <string name="profile">Profile</string>
+    <string name="car_image">Car Image</string>
+    <string name="car_name">Car Name</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="engine_type">Engine Type</string>
+    <string name="number_of_seats">Number of Seats</string>
+    <string name="contine_booking">CONTINE BOOKING</string>
+    <string-array name="Category">
+        <item>Category</item>
+        <item>Honda</item>
+        <item>Toyota</item>
+        <item>Ford</item>
+        <item>Jeep</item>
+        <item>BMW</item>
+        <item>Nissan</item>
+        <item>Lexus</item>
+        <item>Audi</item>
+        <item>Volvo</item>
+        <item>Kia</item>
+        <item>Peugeot</item>
+        <item>Mercedes-Benz</item>
+    </string-array>
+    <string-array name="price_range">
+        <item>Daily Price Range</item>
+        <item>10,000 – 50,000</item>
+        <item>50,000 – 100,000</item>
+        <item>100,000 – 200,000</item>
+        <item>200,000 – 500,000</item>
+        <item>500,000 – 1 million</item>
+        <item>1 million – 5 million</item>
+        <item>5 million - 10 million</item>
+        <item>10 million and above</item>
+    </string-array>
+</resources>
