@@ -97,6 +97,7 @@ public class CarRecyclerAdapter extends RecyclerView.Adapter <CarRecyclerAdapter
              intent.putExtra("no_seats", no_seats);
              intent.putExtra("hourly_price", hourlyPrice);
              intent.putExtra("daily_price", dailyPrice);
+             intent.putExtra("category", car_category);
              intent.putExtra("engine", engine);
              intent.putExtra("price_range", price_range);
              intent.putExtra("imageURL", image_url);

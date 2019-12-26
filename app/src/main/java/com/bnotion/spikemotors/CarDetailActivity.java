@@ -1,11 +1,13 @@
 package com.bnotion.spikemotors;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +20,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.ArrayList;
 
 public class CarDetailActivity extends AppCompatActivity {
-private String car_name, fuelType, engine, no_of_seats, fuelEconomy, air_condition, hourlyPrice, dailyPrice;
+private String car_name, fuelType, engine, no_of_seats, fuelEconomy, category, air_condition, hourlyPrice, dailyPrice;
 private LinearLayout  mImagesArray;
 private ArrayList<String> images;
     @Override
@@ -32,6 +34,10 @@ private ArrayList<String> images;
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
         setContentView(R.layout.activity_car_detail);
+        Toolbar mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
         Intent intent  = getIntent();
         car_name = intent.getStringExtra("name");
         fuelType = intent.getStringExtra("fuel_type");
@@ -41,12 +47,15 @@ private ArrayList<String> images;
         no_of_seats = intent.getStringExtra("no_seats");
         hourlyPrice = intent.getStringExtra("hourly_price");
         dailyPrice = intent.getStringExtra("daily_price");
+        category = intent.getStringExtra("category");
         images  = intent.getStringArrayListExtra("imageURLS");
         mImagesArray =  findViewById(R.id.imagesArray);
         ImageView mImageView = findViewById(R.id.main_img);
         RequestOptions placeholderRequest = new RequestOptions().fitCenter();
         placeholderRequest.placeholder(R.drawable.placeholder);
         Glide.with(this).applyDefaultRequestOptions(placeholderRequest).load(images.get(0)).into(mImageView);
+        TextView mFullNames =  findViewById(R.id.full_name);
+        mFullNames.setText(category   + " " + car_name);
         //get images loop inside linear layout
         for(int i=0;i<images.size();i++)
         {
@@ -75,12 +84,29 @@ private ArrayList<String> images;
         mFuelEconomy.setText(fuelEconomy);
         mAir_condition.setText(air_condition);
         mNo_of_seats.setText(no_of_seats+ " Seats");
-        mHourlyPrice.setText(hourlyPrice);
-        mDailyPrice.setText(dailyPrice);
+        mHourlyPrice.setText("$" + hourlyPrice);
+        mDailyPrice.setText("$" + dailyPrice);
         mEngine.setText(engine);
         mCarName.setText(car_name);
         mContinueBooking.setOnClickListener(v -> {
 
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+        return true;
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
     }
 }
