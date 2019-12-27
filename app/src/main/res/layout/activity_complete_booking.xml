@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CarDetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/customDark"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/car_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:ellipsize="end"
+            android:text="Car Booking"
+            app:fontFamily="@font/muli_bold"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/main_img"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+            <TextView
+                android:padding="10dp"
+                android:text="Pickup Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightDark"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                app:fontFamily="@font/muli_semibold" />
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart= "10dp">
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_margin="5dp"
+                    android:text="22, Plumage Street, California"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lightDark"
+                    android:ellipsize="end"
+                    app:fontFamily="@font/muli_semibold" />
+            </LinearLayout>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_spinner"/>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="Start Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lightDark"
+                        android:ellipsize="end"
+                        app:fontFamily="@font/muli_semibold" />
+                    <EditText
+                        android:layout_gravity="center"
+                        android:text="12/12/2019"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="Start Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lightDark"
+                        android:ellipsize="end"
+                        app:fontFamily="@font/muli_semibold" />
+                    <EditText
+                        android:layout_gravity="center"
+                        android:text="01/012020"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                android:text="Pay for this with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:ellipsize="end"
+                app:fontFamily="@font/muli_semibold"
+                android:layout_marginStart="10dp" />
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:checked="true"
+                    android:buttonTint="@color/customDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="PayPal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/customDark"
+                    android:ellipsize="end"
+                    app:fontFamily="@font/muli_semibold"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/complete_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_dark"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/complete_booking"
+        android:textColor="@drawable/text_selector" />
+</RelativeLayout>

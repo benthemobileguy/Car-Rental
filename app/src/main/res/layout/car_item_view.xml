@@ -16,7 +16,7 @@
         android:id="@+id/image_car"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="230dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

@@ -20,6 +20,8 @@
     <string name="engine_type">Engine Type</string>
     <string name="number_of_seats">Number of Seats</string>
     <string name="continue_booking">CONTIUE BOOKING</string>
+    <string name="complete_booking">COMPLETE BOOKING</string>
+    <string name="back_to_home">BACK TO HOME</string>
     <string-array name="Category">
         <item>Category</item>
         <item>Honda</item>
@@ -45,5 +47,9 @@
         <item>1 million – 5 million</item>
         <item>5 million - 10 million</item>
         <item>10 million and above</item>
+    </string-array>
+    <string-array name="type_select">
+        <item>Hourly Booking</item>
+        <item>Daily Booking</item>
     </string-array>
 </resources>

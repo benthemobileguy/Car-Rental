@@ -40,7 +40,7 @@
        android:id="@+id/main_img"
        android:scaleType="centerCrop"
        android:layout_width="match_parent"
-       android:layout_height="150dp" />
+       android:layout_height="200dp" />
         <LinearLayout
             android:padding="16dp"
             android:id="@+id/imagesArray"
@@ -70,7 +70,7 @@
                 android:layout_height="match_parent"
                 app:srb_starSize="16dp"
                 app:srb_numberOfStars="5"
-                app:srb_starBorderWidth="1.5"
+                app:srb_starBorderWidth="2"
                 app:srb_rating="0"
                 app:srb_stepSize="0.5"
                 app:srb_borderColor="@color/dark_gray"
@@ -238,6 +238,7 @@
     </LinearLayout>
     <LinearLayout
         android:padding="16dp"
+        android:layout_marginBottom="30dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

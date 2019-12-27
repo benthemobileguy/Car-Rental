@@ -89,7 +89,12 @@ private ArrayList<String> images;
         mEngine.setText(engine);
         mCarName.setText(car_name);
         mContinueBooking.setOnClickListener(v -> {
-
+         Intent intentComplete = new Intent(this, CompleteBookingActivity.class);
+         intentComplete.putExtra("fullNames", category + " " + car_name);
+         intentComplete.putExtra("imgLink", images.get(0));
+         intentComplete.putExtra("daily_price", dailyPrice);
+         startActivity(intentComplete);
+         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
     }
     @Override
